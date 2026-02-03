@@ -76,6 +76,7 @@ M.defaults = {
 		on_open = true,
 	},
 	save_path = vim.fn.stdpath("data") .. "/dooing_todos.json",
+	pretty_print_json = false,
 	per_project = {
 		enabled = true,
 		default_filename = "dooing.json",
@@ -115,6 +116,7 @@ M.defaults = {
 	},
 	calendar = {
 		language = "en",
+		start_day = "sunday", -- or "monday"
 		icon = "",
 		keymaps = {
 			previous_day = "h",

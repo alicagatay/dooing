@@ -53,6 +53,7 @@ Dooing comes with sensible defaults that you can override:
 {
     -- Core settings
     save_path = vim.fn.stdpath("data") .. "/dooing_todos.json",
+    pretty_print_json = false, -- Pretty-print JSON output (requires jq or python)
 
     -- Timestamp settings
     timestamp = {
@@ -158,6 +159,7 @@ Dooing comes with sensible defaults that you can override:
 
     calendar = {
         language = "en",
+        start_day = "sunday", -- or "monday"
         icon = "",
         keymaps = {
             previous_day = "h",
@@ -170,6 +172,7 @@ Dooing comes with sensible defaults that you can override:
             close_calendar = "q",
         },
     },
+
 
     -- Priority settings
     priorities = {
@@ -307,7 +310,12 @@ Dooing comes with intuitive keybindings:
 | `<CR>` | Select date       |
 | `q`    | Close calendar    |
 
+**Calendar Start Day:**
+
+You can configure the start day of the week in the calendar by setting `calendar.start_day` to either `"sunday"` or `"monday"`. Any other value will default to `"sunday"`.
+
 ---
+
 
 ## 🔔 Due Date Notifications
 
